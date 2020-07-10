@@ -1,4 +1,4 @@
-package io.coronatracker.coronavirustracker.services;
+package services;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -16,7 +16,7 @@ import org.apache.commons.csv.CSVRecord;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-import io.coronatracker.coronavirustracker.models.LocationStats;
+import models.LocationStats;
 
 @Service
 public class CoronaVirusDataService {
