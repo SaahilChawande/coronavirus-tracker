@@ -51,5 +51,9 @@ public class CoronaVirusDataService {
 		}
 		this.allStats = newStats;
 	}
+
+	public List<LocationStats> getAllStats() {
+		return allStats;
+	}
 }
 
