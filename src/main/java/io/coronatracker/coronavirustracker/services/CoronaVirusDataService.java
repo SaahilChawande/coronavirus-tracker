@@ -20,7 +20,7 @@ public class CoronaVirusDataService {
 	private static String VIRUS_DATA_URL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv";
 	
 	@PostConstruct
-	@Scheduled(cron = "* * * * * *")	// Scheduled to run every second
+	@Scheduled(cron = "* 1 * * * *")	// Scheduled to run every second
 	public void fetchVirusData() throws IOException, InterruptedException	{
 		HttpClient client = HttpClient.newHttpClient();
 		HttpRequest request =  HttpRequest.newBuilder()
