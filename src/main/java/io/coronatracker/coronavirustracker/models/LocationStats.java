@@ -1,4 +1,4 @@
-package models;
+package io.coronatracker.coronavirustracker.models;
 
 public class LocationStats {
 	private String state;
@@ -37,4 +37,5 @@ public class LocationStats {
 	
 	
 }
+
 
