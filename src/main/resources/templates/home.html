@@ -10,22 +10,22 @@
 	<body>
 		<!-- <p th:text="${locationStats}"></p> -->
 		<div class="container">
-			<h1>Coronavirus Tracker Application</h1>
-			<p>This application lists the current number of cases reported across the globe.</p>
+			<h1 class="text-center">Coronavirus Tracker Application</h1>
+			<p class="text-center">This application lists the current number of cases reported across the globe.</p>
 			
-			<div class="jumbotron">
+			<div class="jumbotron text-center">
 				<h1 class="display-4" th:text="${totalReportedCases}"></h1>
 				<p class="lead">Total cases reported as of today.</p>
 				<hr class="my-4">
 				<p>
-				<span>New cases reported since previous day</span>
+				<span>New cases reported since previous day: </span>
 				<b><span th:text="${totalNewCases}"></span></b>
 				</p>
 				
 			</div>
 		
 		
-			<table class="table">
+			<table class="table table-striped" style="text-align: center;">
 				<tr>
 					<th>State</th>
 					<th>Country</th>
@@ -33,13 +33,17 @@
 					<th>Changes since last day</th>
 				</tr>
 				<tr th:each="locationStat : ${locationStats}">
-					<td th:text="${locationStat.state}"></td>
+					<td th:text="${locationStat.state}">-</td>
 					<td th:text="${locationStat.country}"></td>
 					<td th:text="${locationStat.latestTotalCases}">0</td>
 					<td th:text="${locationStat.diffFromPrevDay}">0</td>
 				</tr>
 			</table>
 		</div>
-		
+		<footer class="footer mt-auto py-3">
+  			<div class="container">
+    			<span class="text-muted">Developed by Saahil Chawande.</span>
+  			</div>
+		</footer>
 	</body>
 </html>
