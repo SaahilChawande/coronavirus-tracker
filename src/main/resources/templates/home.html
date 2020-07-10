@@ -7,6 +7,19 @@
 	</head>
 	
 	<body>
-		<p th:text="${locationStats}"></p>
+		<!-- <p th:text="${locationStats}"></p> -->
+		
+		<table>
+			<tr>
+				<th>State</th>
+				<th>Country</th>
+				<th>Total cases reported</th>
+			</tr>
+			<tr th:each="locationStat : ${locationStats}">
+				<td th:text="${locationStat.state}"></td>
+				<td th:text="${locationStat.country}"></td>
+				<td th:text="${locationStat.latestTotalCases}"></td>
+			</tr>
+		</table>
 	</body>
 </html>
